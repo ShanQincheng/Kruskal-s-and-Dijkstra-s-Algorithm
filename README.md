@@ -12,11 +12,12 @@ Put two endpoint and their weight into a structure. And then push this structure
 
 # 2、	Algorithm Design
 ## Purpose:
-### 1、	One algorithm to sorting the structure array by weight and the size of sid string. First make the smallest weight to the first position in the array, and then, sorting the structures that are have the smallest weight by theirs the size of sid string. After this, we will make the structure which have both the smallest weight and the smallest size of sid string be located to the first position in the array. And the structure behind the fisrt structure decrease progressively.
+1、One algorithm to sorting the structure array by weight and the size of sid string. First make the smallest weight to the first position in the array, and then, sorting the structures that are have the smallest weight by theirs the size of sid string. After this, we will make the structure which have both the smallest weight and the smallest size of sid string be located to the first position in the array. And the structure behind the fisrt structure decrease progressively.
 ## Details :
 (1)Using quick sort algorithm sorting the structure array by weight
+
 (2)And then using quick sort algorithm sorting the structure array’s subarray which has the same weight with different sid by the size of sid string
-### 2、One algorithm to determine whether the edge to be added into the minimum spanning tree will case a loop. If will, determine the second structure in the structure array. Repeat this action until find a edge won’t cause a loop and put the edge into the minimum spanning tree.
+2、One algorithm to determine whether the edge to be added into the minimum spanning tree will case a loop. If will, determine the second structure in the structure array. Repeat this action until find a edge won’t cause a loop and put the edge into the minimum spanning tree.
 ## Details:
 Making all the linked sid with the same ancestor.( i.e. all the sid in the same spanning tree has the same ancestor(sid)). When we want to add a new edge to the minimum spanning tree,(i.e. Merge two spanning tree into one) if the two sid at the both end of the edage with the same ancestor, we cancel add this edge because it will cause a loop. Only two spanning tree with different ancestor can be merge into one.
 ![](https://github.com/ShanQincheng/Kruskal-s-and-Dijkstra-s-Algorithm/blob/master/pictures/2.png)
