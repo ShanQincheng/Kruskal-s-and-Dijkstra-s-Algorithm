@@ -7,7 +7,7 @@ StuPairsMinSid* QuickSortAlgo(StuPairsMinSid* array, int arraySize, int left, in
 	StuPairsMinSid tempStruct;
 	
 	strcpy(pivot, array[left].minSid);
-	i = left;
+	i = left + 1;   // huge bug found here 
 	j = right;
 	
 	if(left >= right)
